@@ -87,8 +87,8 @@ namespace BLL
         {
             string ordenar = "";
             if (!Orden.Equals(""))
-                ordenar = "orden by" + Orden;
-            return conexion.ObtenerDatos("Select" + Campos + "From Clientes where" + Condicion + Orden);
+                ordenar = "order by " + Orden;
+            return conexion.ObtenerDatos("Select " + Campos + "From Clientes where" + Condicion + ordenar);
         }
 
     }

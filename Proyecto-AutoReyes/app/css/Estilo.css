@@ -1,0 +1,29 @@
+﻿body {
+    
+}
+header{
+    background:#0094ff;
+    width:1px;
+    height:100px;
+    margin:-10px 0px 0px 0px;
+}
+
+img{
+    width:200px;
+    height:130px;
+    
+}
+
+div{
+
+  margin:2px 20px 10px 0px;
+}
+
+section{
+   margin:-34px 20px 0px 400px;
+}
+
+a{
+    margin:3px 0px 0px 1150px;
+    color:#000000;
+}

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Proyecto_AutoReyes")]
+[assembly: AssemblyTitle("AutoReyes")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("Proyecto_AutoReyes")]
+[assembly: AssemblyProduct("AutoReyes")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("85e99d1c-54f2-460e-b33b-0b217e628d26")]
+[assembly: Guid("66bd43e5-ad2f-4e02-bd06-01f044167685")]
 
 // Version information for an assembly consists of the following four values:
 //

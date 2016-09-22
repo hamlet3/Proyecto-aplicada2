@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="AutoReyes.app.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+  
+     <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body> 
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        
+        <header class="container">
+              
+            <img src="img/NyrAjuZS.png" />
+        </header>
+         <a class="btn btn-success">Iniciar secion</a>
+        <section>
+            <asp:Button class="btn btn-primary" ID="Button1" runat="server" Text="Inicio" Width="66px" />
+            <asp:Button class="btn btn-primary" ID="Button3" runat="server" Text="Vehiculo nuevo" />
+            <asp:Button class="btn btn-primary" ID="Button4" runat="server" Text="Vehiculo usado" />
+            <asp:Button class="btn btn-primary" ID="Button5" runat="server" Text="Publicidad" />
+            <asp:Button class="btn btn-primary" ID="Button7" runat="server" Text="Dealers" />
+        </section>
+        
+
+        <script src="Bootstrap/js/bootstrap.min.js"></script>
+        
+    </div>
+       
+    </form>
+</body>
+</html>

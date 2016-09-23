@@ -40,7 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClaseMaestra.cs" />
-    <Compile Include="Clientes.cs" />
+    <Compile Include="Usuarios.cs" />
     <Compile Include="Colores.cs" />
     <Compile Include="Estados.cs" />
     <Compile Include="Mensajes.cs" />

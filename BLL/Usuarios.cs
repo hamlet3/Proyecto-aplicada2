@@ -7,22 +7,21 @@ using DAL;
 
 namespace BLL
 {
-    public class Clientes : ClaseMaestra
+    public class Usuarios : ClaseMaestra
     {
-        public int ClienteId { get; set; }
+        public int UsuarioId { get; set; }
         public string Nombre { get; set; }
         public string Direccion { get; set; }
         public string Email { get; set; }
-        public char TipoDePlan { get; set; }
         public bool Sexo { get; set; }
         public int Prioridad { get; set; }
 
         public ConexionDb conexion = new ConexionDb();
         public StringBuilder comando = new StringBuilder();
 
-        public Clientes(int clienteId, string nombre, string direccion,string email, bool sexo, int prioridad)
+        public Usuarios(int usuarioId, string nombre, string direccion,string email, bool sexo, int prioridad)
         {
-            this.ClienteId = clienteId;
+            this.UsuarioId = usuarioId;
             this.Nombre = nombre;
             this.Direccion = direccion;
             this.Email = email;
@@ -30,14 +29,14 @@ namespace BLL
             this.Prioridad = prioridad;
         }
 
-        public Clientes() { }
+        public Usuarios() { }
 
         public override bool Insertar()
         {
             bool retorno = false;
             try
             {
-                 conexion.Ejecutar(String.Format("Insert into Clientes(Nombre, Direccion, Email, Sexo, Prioridad) Values('{0}', '{1}', '{2}', '{3}', '{4}');",this.Nombre, this.Direccion, this.Email, this.Sexo, this.Prioridad));
+                 conexion.Ejecutar(String.Format("Insert into Usuarios(Nombre, Direccion, Email, Sexo, Prioridad) Values('{0}', '{1}', '{2}', '{3}', '{4}');",this.Nombre, this.Direccion, this.Email, this.Sexo, this.Prioridad));
                 retorno = true;
             } catch(Exception ex) { throw ex; }
             return retorno;
@@ -49,7 +48,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Update Clientes set Nombre='{0}', Direccion='{1}', Email='{2}', Sexo='{3}', Prioridad='{4}' where ClienteId={5}", this.Nombre, this.Direccion, this.Email, this.Sexo, this.Prioridad, this.ClienteId));
+                conexion.Ejecutar(String.Format("Update Usuarios set Nombre='{0}', Direccion='{1}', Email='{2}', Sexo='{3}', Prioridad='{4}' where ClienteId={5}", this.Nombre, this.Direccion, this.Email, this.Sexo, this.Prioridad, this.UsuarioId));
                 retorno = true;
             }catch(Exception ex) { throw ex; }
             return retorno;
@@ -60,7 +59,7 @@ namespace BLL
             bool retorno = false;
             try
             {
-                conexion.Ejecutar(String.Format("Delete from Clientes where ClienteId={0}", this.ClienteId));
+                conexion.Ejecutar(String.Format("Delete from Usuarios where ClienteId={0}", this.UsuarioId));
                 retorno = true;
             }catch(Exception ex) { throw ex; }
             return retorno;
@@ -70,10 +69,10 @@ namespace BLL
         {
             DataTable dt = new DataTable();
 
-            dt = conexion.ObtenerDatos("Select * from Clientes where ClienteId=" + IdBuscado);
+            dt = conexion.ObtenerDatos("Select * from Usuarios where ClienteId=" + IdBuscado);
             if (dt.Rows.Count > 0)
             {
-                this.ClienteId = (int)dt.Rows[0]["ClienteId"];
+                this.UsuarioId = (int)dt.Rows[0]["Usuarios"];
                 this.Nombre = dt.Rows[0]["Nombre"].ToString();
                 this.Direccion = dt.Rows[0]["Direccion"].ToString();
                 this.Email = dt.Rows[0]["Email"].ToString();
@@ -88,7 +87,7 @@ namespace BLL
             string ordenar = "";
             if (!Orden.Equals(""))
                 ordenar = "order by " + Orden;
-            return conexion.ObtenerDatos("Select " + Campos + "From Clientes where" + Condicion + ordenar);
+            return conexion.ObtenerDatos("Select " + Campos + " From Usuarios where " + Condicion + ordenar);
         }
 
     }
